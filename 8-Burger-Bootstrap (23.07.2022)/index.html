@@ -100,6 +100,9 @@
         .footerList li {
             margin-top: 10px;
         }
+		.mobileIcon {
+			display:none;
+		}
         @media only screen and (max-width: 900px) {
             .imgResDiv {
                 flex: 50%;
@@ -130,19 +133,42 @@
 			.footerList li {
 				margin-right:10px;
 			}
+			.mobileIcon {
+				display:block;
+			}
+			.headerImgDiv {
+				display:none;
+			}
+			.header {
+				flex-direction:column;
+				align-items:flex-start;
+				height:auto;
+			}
+			.mobileLink {
+				display:flex;
+				flex-direction:column;
+			}
+			.navDiv {
+				display:none;
+			}
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div>
+		<div class="mobileIcon" onclick="togle()">
+            <img src="icon.png" alt="" height="50px">
+        </div>
+        <div class="headerImgDiv">
             <img src="burgerlogo.png" alt="" height="50px">
         </div>
-        <div>
+		<div id="navDiv" class="navDiv">
+        <div class="mobileLink">
             <a class="headerLink" href="">Home</a>
             <a class="headerLink" href="">About</a>
             <a class="headerLink" href="">Contact</a>
         </div>
+		</div>
     </div>
 	<div class="container">
 	<div class="banner">
@@ -269,6 +295,17 @@
             <li><a href="">Kariyer</a></li>
         </ul>
     </div>
+<script>
+function togle(){
+	let xDiv = document.getElementById('navDiv');
+
+	if(xDiv.style.display === 'block'){
+		xDiv.style.display = 'none';
+	}else{
+		xDiv.style.display = 'block';
+	}
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
