@@ -1,0 +1,14 @@
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-toolbar a {
+  text-decoration: none;
+  color: white;
+}
+
+/* .loginForm {
+  display: flex;
+  flex-direction: column;
+} */

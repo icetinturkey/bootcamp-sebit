@@ -1,0 +1,19 @@
+<!--<div>
+  <p>İlk Angular Projem</p>
+  {{title}}
+</div>-->
+<!--<div *ngIf="isUpdate">
+  True ise
+</div>-->
+<!--<div *ngFor="let post of posts">
+  {{post.title}}
+</div>-->
+
+<div class="container">
+
+  <div class="row my-5">
+    <div class="col" *ngFor="let post of posts">
+      <app-card [post]="post"></app-card>
+    </div>
+  </div>
+</div>
