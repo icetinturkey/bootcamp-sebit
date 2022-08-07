@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-md-3">
+      <ul>
+        <li class="pb-3" *ngFor="let isim of isimler">{{isim}}</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <div *ngFor="let isim of isimler" class="pb-1">
+        <div class="border rounded-circle d-inline-block font-monospace lh-1 p-2 bg-primary text-light">{{isim | avatar}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
