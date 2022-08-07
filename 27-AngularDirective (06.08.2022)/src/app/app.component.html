@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>İsim</label>
+        <input type="text" class="form-control" (input)="degistir($event.target.value)" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>İsim</b></label>
+      <!--<div>{{name | titlecase}}</div>-->
+      <div>{{name | uppercase}}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Tarih</label>
+        <input type="date" class="form-control" (input)="tarih($event.target.value)" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>Tarih</b></label>
+      <div>{{dt | date:'fullDate'}}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Boy</label>
+        <input type="text" class="form-control" (input)="boy($event.target.value)" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>Boy</b></label>
+      <div>{{height | number:'1.1-4'}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="content-tab">
+<nav>
+  <ul class="pagination">
+    <li class="page-item" [ngClass]="currentPage === 0 ? 'disabled':''">
+      <a class="page-link" href="#" (click)="currentPage = currentPage - 1">Önceki</a>
+    </li>
+
+    <li class="page-item" *ngFor="let item of images;let i=index" [ngClass]="currentPage === i ? 'active':''">
+      <!--<a class="page-link" (click)="degistir(i)" href="#">{{i+1}}</a>-->
+      <a class="page-link" (click)="currentPage=i" href="#">{{i+1}}</a>
+    </li>
+
+    <li class="page-item" [ngClass]="currentPage === images.length-1 ? 'disabled':''">
+      <a class="page-link" href="#" (click)="currentPage = currentPage + 1">Sonraki</a>
+    </li>
+  </ul>
+</nav>
+</div>
+<div class="content-images">
+  <h3>{{images[currentPage].title}}</h3>
+  <img [src]="images[currentPage].url" />
+</div>
