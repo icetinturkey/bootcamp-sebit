@@ -1,0 +1,30 @@
+<div class="container">
+  <!--
+  <div class="d-flex justify-content-between fs-6">
+    <div class="d-flex justify-content-center flex-column">
+      <span class="lh-base">Yazıyı Gör</span>
+    </div>
+    <button mat-button color="primary">X</button>
+  </div>
+  <hr>-->
+
+
+    <div class="row my-3">
+      <div class="col-md-6 pad-sifirla">
+        <img class="w-100 img-yuvarla" *ngIf="blogObj.imageId != null" src="assets/images/image{{blogObj.imageId}}.jpg">
+      </div>
+      <div class="col-md-6">
+        <h2>{{blogObj.title}}</h2>
+        <p>{{blogObj.body}}</p>
+      </div>
+    </div>
+    <div class="row bg-light mb-3 p-2 rounded-4" *ngFor="let yorum of commentDta">
+      <div class="col-md-2 d-flex flex-column justify-content-center">
+        <img class="pp-resim" src="assets/images/profile/profile{{yorum.userId}}.jpg">
+      </div>
+      <div class="col-md-10">
+        <h3>{{yorum.name}}</h3>
+        <p>{{yorum.body}}</p>
+      </div>
+    </div>
+</div>

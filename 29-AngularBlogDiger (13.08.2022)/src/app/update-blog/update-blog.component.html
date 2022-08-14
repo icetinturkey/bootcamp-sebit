@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="d-flex justify-content-between fs-6 mt-4">
+    <div class="d-flex justify-content-center flex-column">
+      <span class="lh-base">Yazıyı Güncelle</span>
+    </div>
+    <!--<button mat-button color="primary">X</button>-->
+  </div>
+  <hr>
+  <form [formGroup]="form">
+    <mat-form-field class="w-100" appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title">
+      <mat-error *ngIf="form.get('title')?.hasError('required')">Zorunlu</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="fill">
+      <mat-label>Body</mat-label>
+      <textarea matInput formControlName="body" rows="10"></textarea>
+      <mat-error *ngIf="form.get('body')?.hasError('required')">Zorunlu</mat-error>
+    </mat-form-field>
+    <div class="d-flex justify-content-center">
+      <button mat-raised-button color="primary" [disabled]="!form.valid" (click)="onSubmit()">Güncelle</button>
+    </div>
+  </form>
+</div>

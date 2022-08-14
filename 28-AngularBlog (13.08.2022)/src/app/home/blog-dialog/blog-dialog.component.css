@@ -1,0 +1,7 @@
+::ng-deep .mat-dialog-container {
+  height:auto;
+}
+.profileImg {
+  width:50px;
+  border-radius:50%;
+}

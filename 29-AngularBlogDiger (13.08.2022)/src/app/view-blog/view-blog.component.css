@@ -1,0 +1,15 @@
+.pp-resim {
+  width:50px;
+  border-radius:50%;
+}
+.pad-sifirla{
+  padding:0;
+}
+.img-yuvarla{
+  border-radius: 16px 0 0 16px;
+}
+@media only screen and (max-width: 768px) {
+  .img-yuvarla{
+    border-radius: 0 0 0 0;
+  }
+}

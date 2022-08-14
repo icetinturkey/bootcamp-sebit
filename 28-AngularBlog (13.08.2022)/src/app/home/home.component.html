@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row mt-1">
+    <h2>Blog</h2>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
+  </div>
+  <div class="row">
+
+    <div class="col-md-3 col-sm-6 mt-2" *ngFor="let post of blogData | slice: (page-1) * pageSize : page * pageSize">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title class="three-dot1">{{post.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="assets/images/image{{post.imageId}}.jpg">
+        <mat-card-content>
+          <p class="three-dot3">
+            {{post.body}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="openDialog(post,false)">Görüntüle</button>
+          <button mat-raised-button color="warn" (click)="openDialog(post,true)">Düzenle</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="pag">
+    <ngb-pagination
+      [(page)]="page"
+      [pageSize]="pageSize"
+      [collectionSize]="blogData.length">
+    </ngb-pagination>
+    </div>
+  </div>
+</div>
