@@ -1,0 +1,11 @@
+::ng-deep mat-card {
+  margin-bottom:10px;
+}
+.containerCard {
+  width:50%;
+  margin:0 auto;
+  margin-top:30px;
+}
+.example-full-width {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+{
+  "articles": [
+    {
+      "author": "admin",
+      "title": "denemebaşlık",
+      "content": "deneme <u>yaz&#305;</u>s&#305;",
+      "comments": [
+        {
+          "username": "ismail",
+          "comment": "burası deneme yorumudur."
+        },
+        {
+          "username": "ismail",
+          "comment": "buda ikinci yorumdur."
+        },
+        {
+          "username": "admin",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+      ],
+      "id": 1
+    },
+    {
+      "author": "merhaba",
+      "title": "deneme",
+      "content": "deneme yazısıdır.<br>",
+      "comments": [],
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<mat-card class="containerCard">
+  <mat-card-content>
+    <div>
+      <h1>{{articleData[articleId]?.title}}</h1>
+      <p><b>Yazar: </b>{{articleData[articleId]?.author}}</p>
+      <p>{{articleData[articleId]?.content}}</p>
+    </div>
+    <br><hr><br>
+    <div>
+      <mat-card *ngFor="let comment of articleData[articleId].comments">
+        <h2>{{comment.username}}</h2>
+        <p>{{comment.comment}}</p>
+      </mat-card>
+    </div>
+    <br>
+    <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Kullanıcı Adı</mat-label>
+        <input matInput placeholder="Kullanıcı Adı" [(ngModel)]="kadi">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Yorum</mat-label>
+        <input matInput placeholder="Yorum" [(ngModel)]="yorum">
+      </mat-form-field>
+      <button mat-raised-button class="example-full-width" color="primary" (click)="yorumEkle()">Yorum Yap</button>
+    </div>
+  </mat-card-content>
+</mat-card>

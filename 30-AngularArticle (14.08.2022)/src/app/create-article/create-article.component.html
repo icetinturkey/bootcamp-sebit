@@ -1,0 +1,20 @@
+<mat-card class="containerCard">
+  <mat-card-content>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Kullanıcı Adı</mat-label>
+    <input matInput placeholder="Kullanıcı Adı" [(ngModel)]="kadi">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Başlık</mat-label>
+    <input matInput placeholder="Başlık" [(ngModel)]="baslik">
+  </mat-form-field>
+    <angular-editor [placeholder]="'Enter text here...'" [config]="editorConfig" [(ngModel)]="icerik"></angular-editor>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button class="example-full-width" color="primary" (click)="post()">Kaydet</button>
+  </mat-card-actions>
+</mat-card>
+

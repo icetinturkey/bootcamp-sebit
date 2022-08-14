@@ -1,0 +1,14 @@
+.containerCard {
+  width:50%;
+  margin:0 auto;
+  margin-top:30px;
+}
+.example-full-width {
+  width: 100%;
+}
+.btn1{
+  width:50%;
+  margin:0 auto;
+  margin-top:30px;
+  padding:16px;
+}

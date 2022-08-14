@@ -1,0 +1,10 @@
+<div class="btn1"><button mat-raised-button color="primary" routerLink="/create">Yeni Yazı Oluştur</button></div>
+<mat-card class="containerCard" *ngFor="let a of articleData;let i=index">
+<mat-card-content>
+<div [routerLink]="'/view/'+i">
+  <h1>{{a.title}}</h1>
+  <p><b>Yazar: </b>{{a.author}}</p>
+  <p>{{a.content}}</p>
+</div>
+</mat-card-content>
+</mat-card>
